@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HarnessLab results</title>
+<style>
+:root{--bg:#f7f5ef;--card:#fff;--ink:#1d2433;--mute:#5d6678;--line:#e3e0d6;--bar:#1f3a8a;--accent:#c0392b}
+@media (prefers-color-scheme: dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--mute:#9aa3b5;--line:#2c3340;--bar:#7aa2ff;--accent:#ff7a6b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 20px 48px}
+h1{font-size:30px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--mute);margin:4px 0 24px}
+h2{font-size:18px;margin:0 0 4px}
+.note{color:var(--mute);margin:0 0 14px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:20px}
+.kpi,.card{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.kpi{padding:14px 16px}
+.kpi b{display:block;font-size:26px;letter-spacing:-.01em}
+.kpi span{color:var(--mute);font-size:13px}
+.card{padding:18px 20px;margin-bottom:16px;overflow-x:auto}
+.chart{width:100%;height:auto;display:block}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .axis{fill:var(--mute);font-size:12px}
+.chart .val{fill:var(--ink);font-size:15px;font-weight:700}
+.chart .lvl{fill:var(--ink);font-size:15px;font-weight:700}
+.chart .bar{fill:var(--bar)}
+table{border-collapse:separate;border-spacing:3px;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:7px 10px;text-align:center;font-size:14px}
+thead th{color:var(--mute);font-weight:600;font-size:13px}
+th.task{text-align:left;font-weight:600;white-space:nowrap}
+td.l{text-align:left;color:var(--mute)}
+.heat td{border-radius:6px;min-width:64px;font-weight:600}
+.heat td.empty{color:var(--mute)}
+.stats td,.stats th{border-bottom:1px solid var(--line)}
+.legend{display:flex;gap:14px;color:var(--mute);font-size:13px;margin-top:10px;flex-wrap:wrap}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.foot{color:var(--mute);font-size:13px;margin-top:22px}
+.model{margin:34px 0 14px;font-size:20px}
+.warn{border-color:var(--accent);color:var(--ink)}
+.warn code{background:var(--bg);padding:1px 5px;border-radius:4px}
+</style></head>
+<body><div class="wrap">
+<h1>HarnessLab</h1>
+<p class="sub">Same free local model, five harness levels, tiny bug-fix tasks. Generated 2026-10-10 15:33 from results.csv.</p>
+<div class="kpis"><div class="kpi"><b>30</b><span>attempts recorded</span></div><div class="kpi"><b>93%</b><span>solved overall</span></div><div class="kpi"><b>H4</b><span>best level so far (100%)</span></div><div class="kpi"><b>0</b><span>attempts that edited the tests</span></div></div>
+<h2 class="model">Model: qwen2.5-coder:7b <span style="color:var(--mute);font-weight:400;font-size:15px">&middot; 30 attempts</span></h2><div class="card"><h2>Tasks solved by harness level</h2><p class="note">Biggest step up between neighbouring levels: H1 to H2 (+33 percentage points).</p><svg viewBox="0 0 760 330" role="img" aria-label="Pass rate by harness level" class="chart">
+<line x1="52" x2="744" y1="268.0" y2="268.0" class="grid"/>
+<text x="44" y="272.0" class="axis" text-anchor="end">0%</text>
+<line x1="52" x2="744" y1="208.0" y2="208.0" class="grid"/>
+<text x="44" y="212.0" class="axis" text-anchor="end">25%</text>
+<line x1="52" x2="744" y1="148.0" y2="148.0" class="grid"/>
+<text x="44" y="152.0" class="axis" text-anchor="end">50%</text>
+<line x1="52" x2="744" y1="88.0" y2="88.0" class="grid"/>
+<text x="44" y="92.0" class="axis" text-anchor="end">75%</text>
+<line x1="52" x2="744" y1="28.0" y2="28.0" class="grid"/>
+<text x="44" y="32.0" class="axis" text-anchor="end">100%</text>
+<rect x="78.3" y="28.0" width="85.8" height="240.0" rx="4" class="bar"/>
+<text x="121.2" y="20.0" text-anchor="middle" class="val">100%</text>
+<text x="121.2" y="290" text-anchor="middle" class="lvl">H0</text>
+<text x="121.2" y="308" text-anchor="middle" class="axis">bare model</text>
+<text x="121.2" y="323" text-anchor="middle" class="axis">6/6 passed</text>
+<rect x="216.7" y="108.0" width="85.8" height="160.0" rx="4" class="bar"/>
+<text x="259.6" y="100.0" text-anchor="middle" class="val">67%</text>
+<text x="259.6" y="290" text-anchor="middle" class="lvl">H1</text>
+<text x="259.6" y="308" text-anchor="middle" class="axis">+ file tools</text>
+<text x="259.6" y="323" text-anchor="middle" class="axis">4/6 passed</text>
+<rect x="355.1" y="28.0" width="85.8" height="240.0" rx="4" class="bar"/>
+<text x="398.0" y="20.0" text-anchor="middle" class="val">100%</text>
+<text x="398.0" y="290" text-anchor="middle" class="lvl">H2</text>
+<text x="398.0" y="308" text-anchor="middle" class="axis">+ test loop</text>
+<text x="398.0" y="323" text-anchor="middle" class="axis">6/6 passed</text>
+<rect x="493.5" y="28.0" width="85.8" height="240.0" rx="4" class="bar"/>
+<text x="536.4" y="20.0" text-anchor="middle" class="val">100%</text>
+<text x="536.4" y="290" text-anchor="middle" class="lvl">H3</text>
+<text x="536.4" y="308" text-anchor="middle" class="axis">+ guards</text>
+<text x="536.4" y="323" text-anchor="middle" class="axis">6/6 passed</text>
+<rect x="631.9" y="28.0" width="85.8" height="240.0" rx="4" class="bar"/>
+<text x="674.8" y="20.0" text-anchor="middle" class="val">100%</text>
+<text x="674.8" y="290" text-anchor="middle" class="lvl">H4</text>
+<text x="674.8" y="308" text-anchor="middle" class="axis">+ context trim</text>
+<text x="674.8" y="323" text-anchor="middle" class="axis">6/6 passed</text>
+</svg></div><div class="card"><h2>Task by level</h2><p class="note">Passed / attempts for every task and harness level.</p><table class="heat"><thead><tr><th>Task</th><th>H0</th><th>H1</th><th>H2</th><th>H3</th><th>H4</th></tr></thead><tbody><tr><th class="task">t05_clamp</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr><tr><th class="task">t06_flatten</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr><tr><th class="task">t07_fibonacci</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(192,57,43,0.20)">0/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr><tr><th class="task">t08_dedupe</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr><tr><th class="task">t09_roman</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr><tr><th class="task">t10_chunk</th><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(192,57,43,0.20)">0/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td><td style="background:rgba(46,125,50,0.72)">1/1</td></tr></tbody></table><div class="legend"><span><i class="sw" style="background:rgba(46,125,50,.72)"></i>passed</span><span><i class="sw" style="background:rgba(192,57,43,.35)"></i>failed</span><span>&ndash; not run yet</span></div></div><div class="card"><h2>Behind the numbers</h2><p class="note">Edited the tests = attempts where the model changed a test file (never counted as a pass). Guard blocks = times H3 refused an early "all fixed".</p><table class="stats"><thead><tr><th>Level</th><th>What it adds</th><th>Pass rate</th><th>Avg steps</th><th>Avg seconds</th><th>Edited the tests</th><th>Guard blocks</th><th>Crashes</th></tr></thead><tbody><tr><th class="task">H0</th><td class="l">bare model</td><td>100% (6/6)</td><td>0.0</td><td>30</td><td>0</td><td>0</td><td>0</td></tr><tr><th class="task">H1</th><td class="l">+ file tools</td><td>67% (4/6)</td><td>2.3</td><td>188</td><td>0</td><td>0</td><td>0</td></tr><tr><th class="task">H2</th><td class="l">+ test loop</td><td>100% (6/6)</td><td>3.5</td><td>209</td><td>0</td><td>0</td><td>0</td></tr><tr><th class="task">H3</th><td class="l">+ guards</td><td>100% (6/6)</td><td>3.5</td><td>100</td><td>0</td><td>0</td><td>0</td></tr><tr><th class="task">H4</th><td class="l">+ context trim</td><td>100% (6/6)</td><td>3.5</td><td>126</td><td>0</td><td>0</td><td>0</td></tr></tbody></table></div>
+<p class="foot">Scoring always restores the original tests, so editing the tests never counts as a pass.
+Small sample, one small local model, tiny tasks: read this as a method and a snapshot, not a general law.</p>
+</div></body></html>
