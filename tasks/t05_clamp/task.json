@@ -1,0 +1,3 @@
+{
+  "description": "Fix clamp(x, low, high): return x limited to the range [low, high]."
+}

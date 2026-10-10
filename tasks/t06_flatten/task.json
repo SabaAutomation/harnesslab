@@ -1,0 +1,3 @@
+{
+  "description": "Fix flatten(items): it must flatten lists nested to any depth into one flat list."
+}

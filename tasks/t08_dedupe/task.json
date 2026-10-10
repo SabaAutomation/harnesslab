@@ -1,0 +1,3 @@
+{
+  "description": "Fix dedupe(items): remove duplicates but keep the original order of first appearance."
+}

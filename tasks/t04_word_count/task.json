@@ -1,0 +1,3 @@
+{
+  "description": "Fix word_count(text): it must count words even when separated by multiple spaces, tabs or newlines."
+}

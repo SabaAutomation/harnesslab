@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <defs>
+    <filter id="wobble" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.25  0 0 0 0.07 0"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#1f3a8a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <style>
+      text { font-family: "Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Marker Felt", cursive; fill: #1f3a8a; }
+      .t  { font-size: 52px; font-weight: bold; }
+      .h  { font-size: 32px; font-weight: bold; }
+      .p  { font-size: 24px; }
+      .s  { font-size: 20px; }
+      .big{ font-size: 34px; font-weight: bold; }
+      .red{ fill: #c0392b; }
+      .grn{ fill: #2e7d32; }
+      .gry{ fill: #6b6b6b; }
+      .c  { text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- paper -->
+  <rect width="1400" height="1000" fill="#fbf6e9"/>
+  <rect width="1400" height="1000" filter="url(#paper)"/>
+  <g stroke="#bcd3e6" stroke-width="1.4">
+    <line x1="0" y1="150" x2="1400" y2="150"/><line x1="0" y1="190" x2="1400" y2="190"/>
+    <line x1="0" y1="230" x2="1400" y2="230"/><line x1="0" y1="270" x2="1400" y2="270"/>
+    <line x1="0" y1="310" x2="1400" y2="310"/><line x1="0" y1="350" x2="1400" y2="350"/>
+    <line x1="0" y1="390" x2="1400" y2="390"/><line x1="0" y1="430" x2="1400" y2="430"/>
+    <line x1="0" y1="470" x2="1400" y2="470"/><line x1="0" y1="510" x2="1400" y2="510"/>
+    <line x1="0" y1="550" x2="1400" y2="550"/><line x1="0" y1="590" x2="1400" y2="590"/>
+    <line x1="0" y1="630" x2="1400" y2="630"/><line x1="0" y1="670" x2="1400" y2="670"/>
+    <line x1="0" y1="710" x2="1400" y2="710"/><line x1="0" y1="750" x2="1400" y2="750"/>
+    <line x1="0" y1="790" x2="1400" y2="790"/><line x1="0" y1="830" x2="1400" y2="830"/>
+    <line x1="0" y1="870" x2="1400" y2="870"/><line x1="0" y1="910" x2="1400" y2="910"/>
+    <line x1="0" y1="950" x2="1400" y2="950"/><line x1="0" y1="990" x2="1400" y2="990"/>
+  </g>
+  <line x1="105" y1="0" x2="105" y2="1000" stroke="#e8a0a0" stroke-width="2.5"/>
+  <g fill="#e9e1cf" stroke="#cfc5ad" stroke-width="2">
+    <circle cx="48" cy="120" r="13"/><circle cx="48" cy="360" r="13"/>
+    <circle cx="48" cy="600" r="13"/><circle cx="48" cy="840" r="13"/>
+  </g>
+
+  <g filter="url(#wobble)">
+
+    <!-- TITLE -->
+    <text x="140" y="80" class="t" transform="rotate(-1 140 80)">HarnessLab: does the harness matter?</text>
+    <path d="M140 98 Q420 112 700 96 T1100 100" stroke="#c0392b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <text x="140" y="134" class="p gry">same model  &#8594;  5 harness levels  &#8594;  10 bug tasks  &#8594;  count what passes</text>
+
+    <!-- THE QUESTION -->
+    <text x="140" y="184" class="h">The question</text>
+    <path d="M140 194 L330 196" stroke="#1f3a8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="140" y="224" class="p">Everyone asks: which model is best?</text>
+    <text x="140" y="264" class="p">I tested what's <tspan class="red">AROUND</tspan> the model.</text>
+    <text x="140" y="304" class="p">Same model. Only the harness moves.</text>
+
+    <!-- HOW I SCORE -->
+    <text x="140" y="384" class="h">How I score it (no cheating)</text>
+    <path d="M140 394 L560 396" stroke="#1f3a8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="140" y="424" class="p">- ORIGINAL tests restored each time</text>
+    <text x="140" y="464" class="p">- edits the tests? tampered, no pass</text>
+    <text x="140" y="504" class="p">- no files outside its own folder</text>
+    <text x="140" y="544" class="p">- every run has a timeout</text>
+    <text x="140" y="604" class="p red">honest scoring &gt; a pretty chart</text>
+    <path d="M136 612 Q330 624 520 610" stroke="#c0392b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- WHAT BROKE -->
+    <text x="140" y="704" class="h">What broke on the way</text>
+    <path d="M140 714 L480 716" stroke="#1f3a8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="140" y="744" class="p">- model printed tool calls as text</text>
+    <text x="160" y="784" class="p grn">fix: a parser that reads them</text>
+    <text x="140" y="824" class="p">- laptop CPU: ~70s per attempt</text>
+    <text x="160" y="864" class="p grn">fix: fewer tasks, 1 run first</text>
+
+    <!-- THE LADDER -->
+    <text x="740" y="184" class="h">The ladder</text>
+    <path d="M740 194 L900 196" stroke="#1f3a8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <g stroke="#1f3a8a" stroke-width="3" fill="#fff3c4" fill-opacity="0.7" stroke-linejoin="round">
+      <rect x="740" y="500" width="112" height="60"/>
+      <rect x="858" y="450" width="112" height="110"/>
+      <rect x="976" y="400" width="112" height="160"/>
+      <rect x="1094" y="350" width="112" height="210"/>
+      <rect x="1212" y="300" width="112" height="260"/>
+    </g>
+    <g class="big c">
+      <text x="796" y="545">H0</text>
+      <text x="914" y="545">H1</text>
+      <text x="1032" y="545">H2</text>
+      <text x="1150" y="545">H3</text>
+      <text x="1268" y="545">H4</text>
+    </g>
+    <g class="s c gry">
+      <text x="796" y="490">bare</text>
+      <text x="914" y="440">+tools</text>
+      <text x="1032" y="390">+tests</text>
+      <text x="1150" y="340">+guards</text>
+      <text x="1268" y="290">+trim</text>
+    </g>
+    <path d="M760 268 Q1000 288 1230 246" stroke="#c0392b" stroke-width="3.5" fill="none" stroke-linecap="round" marker-end="url(#arrR)"/>
+    <text x="880" y="250" class="p red">pass rate ???</text>
+    <text x="740" y="592" class="s gry">my sketch of the guess, NOT data. same model on every step.</text>
+
+    <!-- MY GUESS -->
+    <text x="740" y="664" class="h">My guess (to be tested)</text>
+    <path d="M740 674 L1100 676" stroke="#1f3a8a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="740" y="704" class="p">- H0 bare model: weak</text>
+    <text x="740" y="744" class="p">- H2 sees test errors: big jump?</text>
+    <text x="740" y="784" class="p">- H3 stops fake "all fixed!" claims</text>
+    <text x="740" y="824" class="p">- H4 trimming: maybe nothing here</text>
+    <text x="740" y="864" class="p red">if I'm wrong, I say so on camera</text>
+
+    <!-- STACK -->
+    <path d="M140 900 L1330 902" stroke="#1f3a8a" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 9"/>
+    <text x="140" y="944" class="p">Stack: Python + Ollama + qwen2.5-coder:7b + own test runner + HTML dashboard</text>
+    <text x="140" y="978" class="s gry">this page is the plan. the real numbers live in results/</text>
+  </g>
+</svg>

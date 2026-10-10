@@ -1,0 +1,3 @@
+{
+  "description": "Fix chunk(items, size): split a list into consecutive chunks of at most `size`; keep the final shorter chunk."
+}
